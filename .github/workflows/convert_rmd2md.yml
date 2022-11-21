@@ -1,0 +1,20 @@
+name: Convert2Markdown
+
+on:
+  push:
+    paths:
+      - bookdown/
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Convert to Markdown (bookdown -> readthedocs)
+      run: |
+        cd bookdown
+        for f in *.rmd; do
+          echo "move file to" "../mkdocs/$(basename "$f" .rmd).md"
+          cp "$f" "../mkdocs/$(basename "$f" .rmd).md"
+        done

@@ -13,7 +13,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Convert to R Markdown
       run: |
-        for f in mkdoccs/*.md; do
-          echo "move file to" "bookdown/$(basename "$f" .md).rmd"
-          cp "$f" "bookdown/$(basename "$f" .md).rmd"
+        cd mkdocs/
+        for f in *.md; do
+          echo "move file to" "../bookdown/$(basename "$f" .md).rmd"
+          cp "$f" "../bookdown/$(basename "$f" .md).rmd"
         done
