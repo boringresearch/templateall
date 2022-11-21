@@ -1,0 +1,18 @@
+name: Convert2RMarkdown
+
+on:
+  push:
+    paths:
+      - mkdocs/
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Convert to R Markdown
+      run: |
+        for f in mkdoccs/*.md; do
+          pandoc "$f" -o "bookdown/$(basename "$f" .md).rmd"
+        done
