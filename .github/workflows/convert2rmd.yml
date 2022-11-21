@@ -14,5 +14,6 @@ jobs:
     - name: Convert to R Markdown
       run: |
         for f in mkdoccs/*.md; do
-          pandoc "$f" -o "bookdown/$(basename "$f" .md).rmd"
+          echo "move file to" "bookdown/$(basename "$f" .md).rmd"
+          cp "$f" "bookdown/$(basename "$f" .md).rmd"
         done
