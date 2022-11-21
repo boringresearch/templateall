@@ -14,7 +14,7 @@ jobs:
     - name: Convert to Markdown (bookdown -> readthedocs)
       run: |
         cd bookdown
-        for f in *.rmd; do
-          echo "move file to" "../mkdocs/$(basename "$f" .rmd).md"
-          cp "$f" "../mkdocs/$(basename "$f" .rmd).md"
+        for f in *.Rmd; do
+          echo "move file to" "../mkdocs/$(basename "$f" .Rmd).md"
+          cp "$f" "../mkdocs/$(basename "$f" .Rmd).md"
         done
