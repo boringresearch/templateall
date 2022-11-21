@@ -1,4 +1,4 @@
-docs_dir: Rdocs/
+docs_dir: mkdocs/
 repo_name: 'CyVerse-learning-materials/foss'
 repo_url: 'https://github.com/CyVerse-learning-materials/foss'
 
