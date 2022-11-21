@@ -1,4 +1,4 @@
-FROM drmike/r-bookdown
+FROM xihajun/document:latest
 
 COPY . .
 
