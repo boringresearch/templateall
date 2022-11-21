@@ -1,5 +1,7 @@
 # Mkdocs & bookdown Template 
 
+[Mkdocs - readthedocs style](https://readthedocs-template.netlify.app/)
+[Bookdown style](https://bookdown-template.netlify.app/)
 
 ## mkdocs
 
